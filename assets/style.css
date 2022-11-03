@@ -22,60 +22,12 @@ h1 {
   font-weight: 100;
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
 .log {
   display: flex;
   justify-content: space-between;
   height: 5rem;
   background-color: gray;
   margin: .2rem;
-}
-
-.event-entry p {
-  width: 30px;
-  background-color: #06AED5;
-}
-
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
 }
 
 .hour {

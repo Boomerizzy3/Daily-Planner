@@ -24,6 +24,27 @@ const logUpdateonload = () => {
 
 }
 
+const timeDisplay = () => {
+    let time = moment().format("kk");
+    let currentDay = moment().format('dddd, MMMM do')
+
+    document.getElementById('current-day').innerHTML = currentDay
+
+    let hours = [document.getElementById('nine-am'), document.getElementById('ten-am'), document.getElementById('eleven-am'), document.getElementById('twelve-pm'), document.getElementById('one-pm'), document.getElementById('two-pm'), document.getElementById('three-pm'), document.getElementById('four-pm'), document.getElementById('five-pm')]
+
+    for (let i = 0; i < hours.length; i++) {
+        let x = i + 9
+        if (x == time) {
+            hours[i].style.backgroundColor = 'red';
+        } else if (x > time) {
+            hours[i].style.backgroundColor = 'green';
+        }
+    }
+
+}
+
+timeDisplay();
+
 logUpdateonload();
 
 container.addEventListener('click', (event) => {
@@ -31,55 +52,46 @@ container.addEventListener('click', (event) => {
 
     if (element.matches('#nine-am-save')) {
         let text = document.getElementById('nine-am-text').value
-        console.log(text)
         localStorage.setItem('nine-am', text)
     }
 
     if (element.matches('#ten-am-save')) {
         let text = document.getElementById('ten-am-text').value
-        console.log(text)
         localStorage.setItem('ten-am', text)
     }
 
     if (element.matches('#eleven-am-save')) {
         let text = document.getElementById('eleven-am-text').value
-        console.log(text)
         localStorage.setItem('eleven-am', text)
     }
 
     if (element.matches('#twelve-pm-save')) {
         let text = document.getElementById('twelve-pm-text').value
-        console.log(text)
         localStorage.setItem('twelve-pm', text)
     }
 
     if (element.matches('#one-pm-save')) {
         let text = document.getElementById('one-pm-text').value
-        console.log(text)
         localStorage.setItem('one-pm', text)
     }
 
     if (element.matches('#two-pm-save')) {
         let text = document.getElementById('two-pm-text').value
-        console.log(text)
         localStorage.setItem('two-pm', text)
     }
 
     if (element.matches('#three-pm-save')) {
         let text = document.getElementById('three-pm-text').value
-        console.log(text)
         localStorage.setItem('three-pm', text)
     }
 
     if (element.matches('#four-pm-save')) {
         let text = document.getElementById('four-pm-text').value
-        console.log(text)
         localStorage.setItem('four-pm', text)
     }
 
     if (element.matches('#five-pm-save')) {
         let text = document.getElementById('five-pm-text').value
-        console.log(text)
         localStorage.setItem('five-pm', text)
     }
 })
