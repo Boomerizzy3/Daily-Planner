@@ -34,3 +34,15 @@ h1 {
   width: 3rem;
   margin-left: 1rem;
 }
+
+@media screen and (max-width: 800px) {
+  textarea {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  textarea {
+    width: 10rem;
+  }
+}
